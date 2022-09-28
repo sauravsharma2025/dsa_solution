@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse the given string</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="input" placeholder="Enter your string">
+        <button type="submit" id="submit-btn">Submit</button>
+        <h3 id="output_string"></h3>
+    </div>
+</body>
+</html>
+<script>
+ function reverseString(str) {
+    var newString = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+
+
+
+submit=document.getElementById('submit-btn');
+submit.addEventListener('click',function(){
+    str=document.getElementById('input').value;
+    console.log(reverseString(str))
+    document.getElementById('output_string').innerText=reverseString(str)
+})
+
+</script>
