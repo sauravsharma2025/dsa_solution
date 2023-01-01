@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+  var addStrings = function(num1, num2) {
+    
+    let carry=0;
+let indexOne=num1.length-1;
+let indexTwo=num2.length-1;
+
+let res = '';
+
+while(indexOne>=0 ||indexTwo>=0){
+    let sum=0;
+    
+   let d1 =indexOne>=0 ?Number(num1[indexOne--]):0
+    let d2=(indexTwo>=0)?Number(num2[indexTwo--]):0;
+console.log('SK@',d1,d2);
+     sum+=d1+d2+carry;
+carry=0
+if(sum>9){
+    sum%=10;
+    carry=1;
+   
+}
+res=sum+res;
+console.log('SK@44',indexOne);
+if(carry>0){
+    
+        res+=carry+res
+
+    
+}
+}
+
+return res
+};
+    console.log('SK@',addStrings("625","822"));//672
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html><script>
+//  let str="AAAABBBCCDAAABB";
+//      let counter=0
+//      let output={}
+//    let splitStr=str.split("");
+//    for(let i=0;i<str.length;i++){
+//     for(let j=0;j<str.length;j++){
+//         if(str[i]===str[j])counter++;
+//         else{
+//             continue
+//         }
+//     }
+//     output[str[i]]=counter;
+//     counter=0
+//    }
+//    console.log('SK@',);
+let countChar=(str)=>{
+    let counter=1;
+for(let i=0;i<str.length;i++){
+    if(str[i]===str[i+1]){counter++}
+    else{
+        console.log(str[i]+':'+counter);
+        count=1;
+    }
+}
+}
+console.log('SK@',countChar("saurav"));
+
+
+let countCharacters = (string) => {
+let count = 1;
+for (let i = 0; i < string.length; i++) {
+	if (string[i] === string[i + 1]) {
+	count++;
+	} else {
+	console.log(`${string[i]} occur ${count} times`);
+	count = 1;
+	}
+}
+};
+
+countCharacters("saurav");
+
+// This code is contributed by Aman Singla...
+
+</script>

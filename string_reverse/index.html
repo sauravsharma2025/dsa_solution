@@ -10,12 +10,16 @@
     <div class="container">
         <input type="text" id="input" placeholder="Enter your string">
         <button type="submit" id="submit-btn">Submit</button>
-        <h3 id="output_string"></h3>
+        <h3 id="output_string1"></h3>
+        <h3 id="output_string2"></h3>
+        <h3 id="output_string3"></h3>
+        <h3 id="output_string4"></h3>
+        <h3 id="output_string5"></h3>
     </div>
 </body>
 </html>
 <script>
- function reverseString(str) {
+ function reverseString1(str) {
     var newString = "";
     for (var i = str.length - 1; i >= 0; i--) {
         newString += str[i];
@@ -28,8 +32,69 @@
 submit=document.getElementById('submit-btn');
 submit.addEventListener('click',function(){
     str=document.getElementById('input').value;
-    console.log(reverseString(str))
-    document.getElementById('output_string').innerText=reverseString(str)
+   
+    document.getElementById('output_string1').innerText=reverseString1(str)
+    document.getElementById('output_string2').innerText=reverseString2(str)
+    document.getElementById('output_string3').innerText=reverseString3(str)
+    document.getElementById('output_string4').innerText=reverseString4(str)
+    document.getElementById('output_string5').innerText=reverseString5(str)
+    reverseString4('der')
+    
 })
+
+function reverseString2(str){
+    var newString='';
+    var i=str.length-1;
+    while( i>=0){
+        newString +=str[i];
+        i--;
+}
+return newString;
+}
+function reverseString3(str){
+    
+    newStr='';
+    var ie;
+   for(ie=str.length;ie>=0;ie--){
+     (newStr) += (str.charAt(ie));
+    
+   }
+
+   return newStr;
+}
+function reverseString4(str){
+    let newStr=[];
+    for(let i=str.length-1;i>=0;i--){
+        newStr.push(str.charAt(i))
+     let  tt=JSON.stringify(newStr)
+      tt.replace(/,/g,"")
+    }
+    return tt
+}
+
+
+function reverseString5(str){
+    var newString='';
+    var ie=str.length-1;
+    do{
+       
+        (newString) += (str.charAt(ie));
+        
+        ie--;
+    }while(ie>=0)
+  
+    return newString;
+    
+
+}
+let c={}
+const tt=[1,2,3,4,6,4,3]
+let xy={}
+for(let i=0;i<tt.length;i++){
+  if(xy!=tt)
+    xy=tt[i];
+
+  }
+
 
 </script>

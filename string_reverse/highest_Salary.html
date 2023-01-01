@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+     let employees = [
+    {
+        "id": 11,
+        "name":"Abhinav",
+        "salary":15000
+    },
+    {
+        "id": 2131,
+        "name":"Raj",
+        "salary":62000
+    },
+    {
+        "id": 3012,
+        "name":"Raj",
+        "salary":32000
+    }]
+    let highest=employees[0].salary
+    for(let i=0;i<employees.length;i++){
+        if(highest<employees[i].salary)highest=employees[i].salary;
+        else{continue}
+    }
+    console.log('SK@',highest);
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Step1:Create Object and store every value of arr1
+        Step2:iterate a loop over the arr2 and push the common data.
+      -->
+</body>
+</html>
+<script>
+    let arr1Obj={};
+    let commonElemArray=[];
+    let arr1 = [1, 4, 9, 6, 17, 8, 23];
+let arr2 = [1, 9, 8, 7, 6, 1, 2, 5];
+for(let i=0;i<arr1.length;i++){
+    arr1Obj[arr1[i]]=true;
+}
+for(let j=0;j<arr2.length;j++){
+    if(arr1Obj.hasOwnProperty(arr2[j])){
+        commonElemArray.push(arr2[j])
+    }
+}
+console.log('SK@',commonElemArray);
+</script>

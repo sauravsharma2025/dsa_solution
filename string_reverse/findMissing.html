@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+   function gty(array,n){
+    //     let largest=arr[0];
+    //     for(let i=1;i<arr.length;i++){
+    //         if(largest<arr[i])largest=arr[i]
+    //     }
+        
+    //    for(let j=largest-1;j>0;j--){
+    //         if(arr.includes(j))continue;
+    //         else{
+    //             console.log('SK@',j);
+    //             break}
+
+        
+    //    }
+     //code here
+     let obj={}
+ for(let i=0;i<array.length;i++){
+    obj[array[i]]=true;
+ }
+ for(let j=0;j<array.length;j++){
+    console.log('SK@',obj[j]);
+    if(!obj[j]){return obj[j-1]}
+}
+   }
+      console.log('SK@',gty([2],1));
+</script>

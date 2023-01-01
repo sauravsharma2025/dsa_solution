@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    const wakeUp=()=>{
+        return new Promise((resolve,reject)=>{
+            resolve('Wake Up Saurav');
+        })
+    }
+    const breakFast=()=>{
+        return new Promise((resolve,reject)=>{
+            resolve('Having BreakFast');
+        })
+    }
+    const lunch=()=>{
+        return new Promise((resolve,reject)=>{
+            resolve('Eating Lunch');
+        })
+    }
+    const dinner=()=>{
+        return new Promise((resolve,reject)=>{
+            resolve('Enjoying Dinner')
+        })
+    }
+wakeUp().then((uthJao)=>{console.log(uthJao);
+ return breakFast()}
+ ).then((breakFastKrlo)=>{console.log(breakFastKrlo);return lunch()}).then((abLunchKro)=>{
+    console.log(abLunchKro);
+    return dinner()
+ }).then((dinnerKrlo)=>{console.log(dinnerKrlo);})
+</script>

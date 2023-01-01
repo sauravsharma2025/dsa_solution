@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+     let obj={
+        name:"saurav",
+        address:"Gwalior",
+        company:"vss",
+        bio:{hobby:'sports',food:'veg'}
+        
+    }
+    let obj1={
+        name:"saurav",
+        address:"Gwalior",
+        company:"vss",
+        bo:{hobby:'sports',food:'veg'}
+    }
+    function compareObject(obj,obj1){
+        flag=9;
+        for(let i=0;i<Object.keys(obj).length;i++){
+            if(!obj.hasOwnProperty(Object.keys(obj1)[i]) && (!obj1.hasOwnProperty(Object.keys(obj)[i]))){
+                
+                flag=55;
+            }
+            else if(typeof obj[Object.keys(obj)[i]]==='object' && typeof obj1[Object.keys(obj1)[i]]==='object'){
+                compareObject(obj[Object.keys(obj)[i]],obj1[Object.keys(obj1)[i]])
+            }
+        }
+       
+        if(flag==55)return false
+        return true
+    }
+    console.log('SK@',compareObject(obj,obj1));
+</script>
